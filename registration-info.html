@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>marriage-sp</title>
+    <link rel="icon" href="images/fav.png" type="image/png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <section class="single-page">
+      <div class="container">
+        <div class="page-cont">
+          <div class="page-container">
+            <a href="index.html" class="logo-ancor">
+              <figure class="logo-img">
+                <img src="images/logo.png" alt="logo" class="img-fluid" />
+              </figure>
+            </a>
+            <h2 class="page-title">تسجيل حساب جديد</h2>
+            <span class="register-link"
+              >لديك حساب؟ <a href="index.html">سجل دخول</a></span
+            >
+            <div class="wizard card-like">
+              <form>
+                <div class="wizard-header">
+                  <div class="steps">
+                    <div class="steps-progress">
+                      <ul class="progressbar list-unstyled wizard-step">
+                        <li class="">
+                          <i class="las la-user"></i>
+                        </li>
+                        <li>
+                          <i class="las la-mobile"></i>
+                        </li>
+                        <li class="d-none">
+                          <i class="las la-city"></i>
+                        </li>
+                        <li>
+                          <i class="las la-city"></i>
+                        </li>
+                        <li>
+                          <i class="las la-credit-card"></i>
+                        </li>
+                        <li>
+                          <i class="las la-check"></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-body">
+                  <div class="step initial active">
+                    <div class="form-group main-check">
+                      <label class="main-check-label">نوع الحساب</label>
+                      <div class="check-group">
+                        <label class="check-label">
+                          <input type="checkbox" checked="checked" />
+                          <span class="check-text">صالون</span>
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="check-label">
+                          <input type="checkbox" />
+                          <span class="check-text">قاعة</span>
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label"> الاسم بالكامل</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> رقم الجوال</label>
+                        <div class="form-input-relative">
+                          <input
+                            type="tel"
+                            class="tel-input form-input"
+                            placeholder="5xxxxxxxx"
+                          />
+                          <span class="tel-lang">
+                            996+
+                            <img src="images/lang.png" alt="" />
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> البريد الإلكتروني</label>
+                        <input type="email" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">المدينة</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input select2-city" name="city">
+                            <option value="two">الرياض</option>
+                            <option value="three">المدينة</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> كلمة المرور </label>
+                        <div class="form-input-relative">
+                          <label class="password-show">
+                            <input type="checkbox" onchange="showPass(this)" />
+                            <i class="las la-eye"></i>
+                          </label>
+                          <input type="password" class="form-input" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">تأكيد كلمة المرور</label>
+                        <div class="form-input-relative">
+                          <label class="password-show">
+                            <input type="checkbox" onchange="showPass(this)" />
+                            <i class="las la-eye"></i>
+                          </label>
+                          <input type="password" class="form-input" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="verfiy-cont">
+                      <p class="form-text">اضف رمز التحقق المرسل على جوالك</p>
+                      <div class="form-group digit-group">
+                        <input
+                          type="text"
+                          id="digit-1"
+                          name="digit-1"
+                          data-next="digit-2"
+                        />
+                        <input
+                          type="text"
+                          id="digit-2"
+                          name="digit-2"
+                          data-next="digit-3"
+                          data-previous="digit-1"
+                        />
+                        <input
+                          type="text"
+                          id="digit-3"
+                          name="digit-3"
+                          data-next="digit-4"
+                          data-previous="digit-2"
+                        />
+                        <input
+                          type="text"
+                          id="digit-4"
+                          name="digit-4"
+                          data-previous="digit-3"
+                        />
+                      </div>
+                      <div class="countDown-cont">
+                        <span class="timer">
+                          <span id="counter"></span>
+                        </span>
+                      </div>
+                      <span class="custom-link"
+                        >لم يصلك رمز التفعيل؟
+                        <a href="#">إعادة الإرسال</a></span
+                      >
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label"> اسم القاعة</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> شعار القاعة</label>
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملف</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          الصورة الرئيسية للقاعة</label
+                        >
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملف</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> الصور الفرعية للقاعة</label>
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملفات</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> فيديو القاعة</label>
+                        <input
+                          type="url"
+                          class="form-input"
+                          placeholder="اضف رابط يوتيوب"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> الموقع على الخريطة</label>
+                        <div class="form-input-relative">
+                          <span class="map-icon">
+                            <i class="las la-map"></i>
+                          </span>
+                          <button class="form-input">
+                            حدد موقع القاعة على خريطة جوجل
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-group full-grid">
+                        <label class="form-label"> سعر القاعة</label>
+                        <input
+                          type="number"
+                          class="form-input"
+                          placeholder="ادخل السعر بالريال السعودي"
+                        />
+                      </div>
+                      <div class="form-group full-grid">
+                        <label class="form-label"> نبذة عن القاعة</label>
+                        <textarea class="form-input"></textarea>
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label">نوع القاعة</label>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">رجال</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">نساء</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">رجال/ نساء</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="number"
+                          class="form-input"
+                          placeholder="سعة قاعة الرجال"
+                        />
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label"
+                          >تحتوي على قاعه للطعام</label
+                        >
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">نعم</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">لا</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="number"
+                          class="form-input"
+                          placeholder="سعة قاعة الطعام الرجال"
+                        />
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label"
+                          >الخدمات المتوفرة بالقاعة</label
+                        >
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">مأكولات</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">مشروبات</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">دي جي</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">تصوير فيديو</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label"> اسم الصالون</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> شعار الصالون</label>
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملف</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          الصورة الرئيسية للصالون</label
+                        >
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملف</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> الصور الفرعية للصالون</label>
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملفات</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> فيديو الصالون</label>
+                        <input
+                          type="url"
+                          class="form-input"
+                          placeholder="اضف رابط يوتيوب"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> الموقع على الخريطة</label>
+                        <div class="form-input-relative">
+                          <span class="map-icon">
+                            <i class="las la-map"></i>
+                          </span>
+                          <button class="form-input">
+                            حدد موقع الصالون على خريطة جوجل
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-group full-grid">
+                        <label class="form-label"> نبذة عن الصالون</label>
+                        <textarea class="form-input"></textarea>
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label"
+                          >مكان تقديم الخدمات</label
+                        >
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">المركز</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">المنزل</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">المركز/ المنزل</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label">نوع الصالون</label>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">رجالي</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">نسائي</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label">أوقات العمل</label>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">السبت</span>
+                            <span class="checkmark custom-checkmark"></span>
+                          </label>
+                          <div class="work-times">
+                            <div class="time-from">
+                              <span class="time-text">من</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="10:00" />
+                            </div>
+                            <div class="time-from">
+                              <span class="time-text">الى</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="22:00" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">الأحد</span>
+                            <span class="checkmark custom-checkmark"></span>
+                          </label>
+                          <div class="work-times">
+                            <div class="time-from">
+                              <span class="time-text">من</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="10:00" />
+                            </div>
+                            <div class="time-from">
+                              <span class="time-text">الى</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="22:00" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">الاثنين</span>
+                            <span class="checkmark custom-checkmark"></span>
+                          </label>
+                          <div class="work-times">
+                            <div class="time-from">
+                              <span class="time-text">من</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="10:00" />
+                            </div>
+                            <div class="time-from">
+                              <span class="time-text">الى</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="22:00" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">الثلاثاء</span>
+                            <span class="checkmark custom-checkmark"></span>
+                          </label>
+                          <div class="work-times">
+                            <div class="time-from">
+                              <span class="time-text">من</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="10:00" />
+                            </div>
+                            <div class="time-from">
+                              <span class="time-text">الى</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="22:00" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">الأربعاء</span>
+                            <span class="checkmark custom-checkmark"></span>
+                          </label>
+                          <div class="work-times">
+                            <div class="time-from">
+                              <span class="time-text">من</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="10:00" />
+                            </div>
+                            <div class="time-from">
+                              <span class="time-text">الى</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="22:00" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">الخميس</span>
+                            <span class="checkmark custom-checkmark"></span>
+                          </label>
+                          <div class="work-times">
+                            <div class="time-from">
+                              <span class="time-text">من</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="10:00" />
+                            </div>
+                            <div class="time-from">
+                              <span class="time-text">الى</span>
+                              <i class="las la-clock"></i>
+                              <input type="time" value="22:00" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label"
+                          >إمكانية الحجز بنفس الموعد لنفس مكان تقديم
+                          الخدمة</label
+                        >
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">نعم</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">لا</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group full-grid main-check">
+                        <label class="main-check-label"
+                          >إمكانية الحجز بنفس الموعد لأماكن تقديم الخدمة</label
+                        >
+                        <div class="check-group">
+                          <label class="check-label">
+                            <input type="checkbox" checked="checked" />
+                            <span class="check-text">نعم</span>
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="check-label">
+                            <input type="checkbox" />
+                            <span class="check-text">لا</span>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label"> رقم السجل التجاري</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          صورة شهادة السجل التجاري</label
+                        >
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملف</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          تاريخ اصدار السجل التجاري</label
+                        >
+                        <div class="date-div-cont">
+                          <input
+                            class="selector form-input"
+                            type="text"
+                            value="2022/05/05"
+                          />
+                          <i class="las la-calendar-alt"></i>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          تاريخ انتهاء السجل التجاري</label
+                        >
+                        <div class="date-div-cont">
+                          <input
+                            class="selector form-input"
+                            type="text"
+                            value="2022/05/05"
+                          />
+                          <i class="las la-calendar-alt"></i>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> الرقم الضريبي</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          صورة شهادة التسجيل التضريبي</label
+                        >
+                        <label class="custom-file-upload form-input">
+                          <input type="file" class="upload-change" />
+                          <span
+                            class="upload-btn file-txt"
+                            data-title="Upload CV"
+                            >اضافة ملف</span
+                          >
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> اسم البنك</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> اسم صاحب الحساب</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> رقم الحساب</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> رقم الايبان</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="success-cont">
+                      <h1 class="success-icon">
+                        <i class="las la-check-circle"></i>
+                      </h1>
+                      <h2 class="success-title">تم إرسال طلبكم بنجاح</h2>
+                      <p class="success-pargh">
+                        سيتم مراجعة البيانات لقبول الطلب وتفعيل الحساب في أقرب
+                        وقت ممكن
+                      </p>
+                      <a href="index.html" class="first-btn" rel="nofollow">
+                        تسجيل دخول</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-footer">
+                  <!-- <div
+                    class="Conditions"
+                    id="wizard-condition"
+                    style="display: none"
+                  >
+                    الضغط على زر تسجيل يعني موافقتك على
+                    <a href="#" class="anc_Condition anc_gh">الشروط والأحكام</a>
+                    الخاصة بالمتجر
+                  </div> -->
+                  <div class="wizard-btn-cont">
+                    <button
+                      id="wizard-prev"
+                      style="display: none"
+                      type="button"
+                      class="btn btn-irv btn-irv-default second-btn"
+                    >
+                      رجوع
+                    </button>
+                    <button
+                      id="wizard-next"
+                      type="button"
+                      class="btn btn-irv first-btn"
+                    >
+                      التالي
+                    </button>
+                    <button
+                      id="wizard-subm"
+                      style="display: none"
+                      type="button"
+                      class="btn btn-irv first-btn"
+                    >
+                      تسجيل
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <p class="copy-right">© ميراج 2022 - جميع الحقوق محفوظة</p>
+        </div>
+      </div>
+    </section>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

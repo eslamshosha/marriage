@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>marriage-sp</title>
+    <link rel="icon" href="images/fav.png" type="image/png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <div class="page-wrapper">
+      <div class="page-inner">
+        <aside class="page-sidebar sidenav">
+          <a href="index.html" class="logo-ancor">
+            <figure class="logo-img">
+              <img src="images/logo-board.png" alt="logo" class="img-fluid" />
+            </figure>
+          </a>
+          <ul class="accordion fixall" id="accordionExample">
+            <li>
+              <a class="drop-link collapsed" href="#">
+                <span class="drop-span">
+                  <i class="las la-tachometer-alt"></i>
+                  <span>لوحة التحكم</span>
+                </span>
+              </a>
+            </li>
+            <li class="drop_">
+              <a
+                class="drop-link collapsed"
+                href="#"
+                role="button"
+                data-toggle="collapse"
+                data-target="#ac1"
+                class=""
+                aria-expanded="false"
+              >
+                <span class="drop-span">
+                  <i class="las la-border-all"></i>
+                  <span>الحجوزات</span>
+                </span>
+                <i class="las la-angle-left arrow"></i>
+              </a>
+              <ul
+                id="ac1"
+                class="drop-list fixall collapse"
+                aria-expanded="false"
+                style="height: 0px"
+              >
+                <li><a href="#">تقويم الحجوزات</a></li>
+                <li><a href="#">قائمة الحجوزات</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="drop-link collapsed" href="#">
+                <span class="drop-span">
+                  <i class="las la-clipboard-list"></i>
+                  <span>الخدمات</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="drop-link collapsed" href="#">
+                <span class="drop-span">
+                  <i class="lar la-star"></i>
+                  <span>التقييمات</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="drop-link collapsed" href="#">
+                <span class="drop-span">
+                  <i class="las la-coins"></i>
+                  <span>المستحقات</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="drop-link collapsed" href="#">
+                <span class="drop-span">
+                  <i class="las la-bell"></i>
+                  <span>الإشعارات</span>
+                </span>
+              </a>
+            </li>
+            <li class="drop_">
+              <a
+                class="drop-link collapsed"
+                href="#"
+                role="button"
+                data-toggle="collapse"
+                data-target="#ac2"
+                class=""
+                aria-expanded="false"
+              >
+                <span class="drop-span">
+                  <i class="las la-user"></i>
+                  <span>الملف الشخصي</span>
+                </span>
+                <i class="las la-angle-left arrow"></i>
+              </a>
+              <ul
+                id="ac2"
+                class="drop-list fixall collapse"
+                aria-expanded="false"
+                style="height: 0px"
+              >
+                <li><a href="#">تقويم الحجوزات</a></li>
+                <li><a href="#">قائمة الحجوزات</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="drop-link collapsed" href="#">
+                <span class="drop-span">
+                  <i class="las la-cog"></i>
+                  <span>الإعدادات</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <div class="page-content-wrapper">
+          <!-- header section     -->
+          <header>
+            <div class="top-header">
+              <div class="nav-right">
+                <div class="show-icons">
+                  <a class="menu-bars fixall" id="menu-id" href="#!">
+                    <span class="bars open-bars"></span>
+                  </a>
+                </div>
+                <div class="date-head">
+                  <h4 class="date-title">تاريخ التسجيل في المنصة</h4>
+                  <div class="date-cont-div">
+                    <span> 2022/07/05 </span>
+                    <span class="date-slash"> - </span>
+                    <span> 17:53 </span>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-left">
+                <div class="balance-cont">
+                  <i class="las la-coins"></i>
+                  <span>SAR 550</span>
+                </div>
+                <div class="user-notification dropdown">
+                  <div
+                    class="user-cont dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-expanded="false"
+                    id="dropdownMenuLink"
+                  >
+                    <span class="notification-btn">
+                      <i class="las la-bell"></i>
+                      <span class="counter">5</span>
+                    </span>
+                  </div>
+                  <ul
+                    class="profile-notification dropdown-menu"
+                    aria-labelledby="dropdownMenuLink"
+                    data-dropdown-in="fadeIn"
+                    data-dropdown-out="fadeOut"
+                  >
+                    <li>
+                      <a href="#!">
+                        <figure class="notif-icon">
+                          <img src="images/notif-icon.png" alt="" />
+                        </figure>
+                        <div class="notification-cont">
+                          <h4 class="notification-name">
+                            لديك طلب جديد رقم 123# للعميل سعود فيصل
+                          </h4>
+                          <span class="notification-time">
+                            <i class="las la-clock"></i>
+                            <span>منذ 48 دقيقة</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        <figure class="notif-icon">
+                          <img src="images/notif-icon.png" alt="" />
+                        </figure>
+                        <div class="notification-cont">
+                          <h4 class="notification-name">
+                            لديك طلب جديد رقم 123# للعميل سعود فيصل
+                          </h4>
+                          <span class="notification-time">
+                            <i class="las la-clock"></i>
+                            <span>منذ 48 دقيقة</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!">
+                        <figure class="notif-icon">
+                          <img src="images/notif-icon.png" alt="" />
+                        </figure>
+                        <div class="notification-cont">
+                          <h4 class="notification-name">
+                            لديك طلب جديد رقم 123# للعميل سعود فيصل
+                          </h4>
+                          <span class="notification-time">
+                            <i class="las la-clock"></i>
+                            <span>منذ 48 دقيقة</span>
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="notification-show">
+                        عرض جميع الإشعارات
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="user-profile dropdown">
+                  <div
+                    class="user-cont dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-expanded="false"
+                    id="dropdownMenuLink"
+                  >
+                    <img
+                      src="images/profile.png"
+                      class="profile-img"
+                      alt="User-Profile-Image"
+                    />
+                    <div class="user-info">
+                      <span class="user-name">
+                        <span>عدنان الجابري</span>
+                        <i class="las la-angle-down"></i>
+                      </span>
+                      <span class="user-id"> #2241 </span>
+                    </div>
+                  </div>
+                  <ul
+                    class="profile-menu dropdown-menu"
+                    aria-labelledby="dropdownMenuLink"
+                    data-dropdown-in="fadeIn"
+                    data-dropdown-out="fadeOut"
+                  >
+                    <li>
+                      <a href="#!"> الملف الشخصى </a>
+                    </li>
+                    <li>
+                      <a href="#!"> الإعدادات </a>
+                    </li>
+                    <li>
+                      <a href="#!"> تسجيل الخروج </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!-- header section     -->
+          <!-- main -->
+          <main>
+            <div class="page-content">
+              <!-- <div class="subheader">
+                <h1 class="subheader-title">today</h1>
+                <div class="subheader-block">
+                  <i class="las la-sort"></i>
+                </div>
+              </div> -->
+              <div class="book-container">
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">إجمالي قيمة الحجوزات</span>
+                    <span class="book-number">SAR 26250</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-credit-card"></i>
+                  </span>
+                </div>
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">إجمالي عدد الحجوزات</span>
+                    <span class="book-number">68</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-clipboard-list"></i>
+                  </span>
+                </div>
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">صافي الربح</span>
+                    <span class="book-number">SAR 13125</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-coins"></i>
+                  </span>
+                </div>
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">الحجوزات الجارية</span>
+                    <span class="book-number">4</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-spinner"></i>
+                  </span>
+                </div>
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">حجوزات بها مشكلة</span>
+                    <span class="book-number">2</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">الحجوزات المنتهية</span>
+                    <span class="book-number">55</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-check-circle"></i>
+                  </span>
+                </div>
+                <div class="book-box">
+                  <div class="book-info">
+                    <span class="book-name">الحجوزات الملغية</span>
+                    <span class="book-number">7</span>
+                  </div>
+                  <span class="book-icon">
+                    <i class="las la-times-circle"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </main>
+          <!-- main -->
+          <!-- footet -->
+          <footer>
+            <div class="footer-cont">
+              <span> © ميراج 2022 - جميع الحقوق محفوظة </span>
+              <ul>
+                <li>
+                  <a href="#"> من نحن </a>
+                  <a href="#"> الشروط والأحكام </a>
+                  <a href="#"> | اتصل بنا </a>
+                </li>
+              </ul>
+            </div>
+          </footer>
+          <!-- footet -->
+        </div>
+      </div>
+    </div>
+    <!-- Start Login Modal -->
+    <div class="modal fade login-modal" id="login-modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <form class="signin-form">
+              <div class="signin-group">
+                <input
+                  type="email"
+                  class="signin-input"
+                  placeholder="Mobile number/e-mail"
+                />
+                <input
+                  type="password"
+                  class="signin-input"
+                  placeholder="password"
+                />
+                <button class="signin-btn">sign in</button>
+              </div>
+            </form>
+            <a role="button" data-dismiss="modal" class="forget-pass">
+              did you forget your password?
+            </a>
+            <p class="register-text">
+              You don't have an account <a href="#">Register now</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Login Modal -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
