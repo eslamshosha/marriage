@@ -61,7 +61,7 @@
                 data-toggle="collapse"
                 data-target="#ac1"
                 class=""
-                aria-expanded="false"
+                aria-expanded="true"
               >
                 <span class="drop-span">
                   <i class="las la-border-all"></i>
@@ -71,12 +71,11 @@
               </a>
               <ul
                 id="ac1"
-                class="drop-list fixall collapse"
-                aria-expanded="false"
-                style="height: 0px"
+                class="drop-list fixall collapse show"
+                aria-expanded="true"
               >
                 <li><a href="#">تقويم الحجوزات</a></li>
-                <li><a href="#">قائمة الحجوزات</a></li>
+                <li><a href="#" class="active">قائمة الحجوزات</a></li>
               </ul>
             </li>
             <li>
@@ -153,7 +152,7 @@
             <div class="top-header">
               <div class="nav-right">
                 <div class="show-icons">
-                  <button class="menu-bars fixall" id="menu-id" >
+                  <button class="menu-bars fixall" id="menu-id">
                     <span class="bars open-bars"></span>
                   </button>
                 </div>
@@ -288,69 +287,148 @@
           <!-- main -->
           <main>
             <div class="page-content">
-              <div class="book-container">
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">إجمالي قيمة الحجوزات</span>
-                    <span class="book-number">SAR 26250</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-credit-card"></i>
-                  </span>
+              <div class="subheader">
+                <h1 class="subheader-title">قائمة الحجوزات</h1>
+                <div class="subheader-block">
+                  <ol class="breadcrumb">
+                    <li class="item-home">
+                      <a class="bread-link bread-home" href="dashboard.html"
+                        >الرئيسيه</a
+                      >
+                    </li>
+                    <li class="item-home">
+                      <a class="bread-link bread-home" href="dashboard.html"
+                        >الحجوزات</a
+                      >
+                    </li>
+                    <li class="active item-23">
+                      <span class="bread-current">قائمة الحجوزات</span>
+                    </li>
+                  </ol>
                 </div>
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">إجمالي عدد الحجوزات</span>
-                    <span class="book-number">68</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-clipboard-list"></i>
-                  </span>
-                </div>
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">صافي الربح</span>
-                    <span class="book-number">SAR 13125</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-coins"></i>
-                  </span>
-                </div>
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">الحجوزات الجارية</span>
-                    <span class="book-number">4</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-spinner"></i>
-                  </span>
-                </div>
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">حجوزات بها مشكلة</span>
-                    <span class="book-number">2</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-exclamation-triangle"></i>
-                  </span>
-                </div>
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">الحجوزات المنتهية</span>
-                    <span class="book-number">55</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-check-circle"></i>
-                  </span>
-                </div>
-                <div class="book-box">
-                  <div class="book-info">
-                    <span class="book-name">الحجوزات الملغية</span>
-                    <span class="book-number">7</span>
-                  </div>
-                  <span class="book-icon">
-                    <i class="las la-times-circle"></i>
-                  </span>
+              </div>
+              <div class="page-content-body">
+                <div class="table-groub table-responsive">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>رقم الطلب</th>
+                        <th>تاريخ الطلب</th>
+                        <th>اسم العميل</th>
+                        <th>قيمة الطلب</th>
+                        <th>الحالة</th>
+                        <th>عرض</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-1"> طلب جاري </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-2"> به مشكلة </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-3"> ملغي </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-4"> مكتمل </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-4"> مكتمل </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-4"> مكتمل </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2871</td>
+                        <td>2022/07/05 - 17:55</td>
+                        <td>سعود فيصل</td>
+                        <td>150 ريال</td>
+                        <td>
+                          <span class="table-status status-4"> مكتمل </span>
+                        </td>
+                        <td>
+                          <a href="#" class="table-show-link">
+                            <i class="las la-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -359,7 +437,9 @@
           <!-- footet -->
           <footer>
             <div class="footer-cont">
-              <span class="footer-copy-right"> © ميراج 2022 - جميع الحقوق محفوظة </span>
+              <span class="footer-copy-right">
+                © ميراج 2022 - جميع الحقوق محفوظة
+              </span>
               <ul class="footer-list">
                 <li>
                   <a href="#"> من نحن </a>
@@ -378,7 +458,6 @@
       </div>
     </div>
     <div class="overlay-box"></div>
-    
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
