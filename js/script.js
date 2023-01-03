@@ -263,6 +263,7 @@ if (dateExists) {
 //               "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
 
 // var days =["اﻷحد","اﻷثنين","الثلاثاء","اﻷربعاء","الخميس","الجمعة","السبت"];
+
 //calender
 const calenderExists = document.getElementsByClassName("calendar").length > 0;
 if (calenderExists) {
@@ -276,7 +277,13 @@ if (calenderExists) {
     }
 
     init() {
-      moment.locale(window.navigator.userLanguage || window.navigator.language);
+      var lang;
+      if (document.dir == "rtl") {
+        lang = "ar-sa";
+      } else {
+        lang = "en-us";
+      }
+      moment.locale(lang);
 
       this.month = moment();
       this.today = this.selected = this.month.clone();
@@ -296,9 +303,9 @@ if (calenderExists) {
       this.bodyDivs.forEach((day) => {
         day.addEventListener("click", (e) => {
           const date =
-            +e.target.innerHTML < 10
-              ? `0${e.target.innerHTML}`
-              : e.target.innerHTML;
+            +e.target.childNodes[0].innerHTML < 10
+              ? `0${e.target.childNodes[0].innerHTML}`
+              : e.target.childNodes[0].innerHTML;
 
           if (e.target.classList.contains("cal-day__month--next")) {
             this.selected = moment(
@@ -399,7 +406,7 @@ if (calenderExists) {
           this.bodyDivs[index].classList.add("cal-day__month--next");
         }
 
-        this.bodyDivs[index].innerText = day++;
+        this.bodyDivs[index].innerHTML = `<span>${day++}</span>`;
       }
     }
 
@@ -412,10 +419,10 @@ if (calenderExists) {
         this.bodyDivs[index].classList.remove("cal-day__month--current");
       this.bodyDivs[index].classList.contains("cal-day__day--today") &&
         this.bodyDivs[index].classList.remove("cal-day__day--today");
-      if (selected) {
-        this.bodyDivs[index].classList.contains("cal-day__day--selected") &&
-          this.bodyDivs[index].classList.remove("cal-day__day--selected");
-      }
+      // if (selected) {
+      //   this.bodyDivs[index].classList.contains("cal-day__day--selected") &&
+      //     this.bodyDivs[index].classList.remove("cal-day__day--selected");
+      // }
     }
   }
   const cal = new Calendar();
