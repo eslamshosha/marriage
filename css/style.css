@@ -1677,6 +1677,7 @@ second, second and am/pm */
   font-weight: 400;
   font-size: 16px;
   color: var(--black-color);
+  text-align: start;
 }
 .notification-time {
   display: flex;
@@ -1950,6 +1951,9 @@ footer {
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
 }
+.table-groub tbody .table-btn:disabled {
+  opacity: 0.5;
+}
 .table-groub tbody .table-show-link:hover,
 .table-groub tbody .table-show-link:focus,
 .table-groub tbody .table-btn:hover,
@@ -1981,6 +1985,9 @@ footer {
 }
 .status-4 {
   background-color: #60c547;
+}
+.status-5 {
+  background-color: var(--main-hover);
 }
 .custom-pagention {
   display: flex;
@@ -2448,7 +2455,128 @@ a.item-status:hover {
 .sub-rate i.rated-star {
   color: #f5a623;
 }
+.table-groub .sub-rate i {
+  font-size: 16px;
+}
+.order-link {
+  display: inline-block;
+  color: #4d4d4d;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.order-link:hover {
+  color: var(--main-hover);
+}
+.rate-name-cont {
+  display: flex;
+  align-items: center;
+}
+.rate-name {
+  margin-inline-end: 10px;
+}
+.credit-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin-bottom: 40px;
+  border: 2px solid rgb(242, 242, 242);
+}
+.credit-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.credit-icon {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fedcdc;
+  color: var(--main-hover);
+  font-size: 44px;
+  flex-shrink: 0;
+  margin-inline-end: 15px;
+}
+.credit-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: start;
+}
+.credit-name {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black-color);
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.credit-number {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--black-color);
+}
+.credit-anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 319px;
+  height: 68px;
+  max-width: 100%;
+  border-radius: 34px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white-color);
+  background-color: var(--main-hover);
+  transition: all 0.3s ease-in-out;
+}
+.credit-anchor i {
+  font-size: 30px;
+  margin-inline-end: 8px;
+}
+.credit-anchor:hover {
+  text-decoration: none;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+.notification-body {
+  padding: 0 0 40px;
+}
+.notification-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgb(243, 243, 249);
+}
+.notification-info {
+  display: flex;
+  align-items: center;
+}
+.custom-notification .notification-name{
+  color: #808080;
+}
+.notification-info .notif-icon {
+  width: 49px;
+  height: 49px;
+  margin-inline-end: 15px;
+}
+.notif-btn {
+  color: #cccccc;
+  font-size: 30px;
+  border: none;
+  outline: none !important;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.notif-btn:hover {
+  color: var(--main-hover);
+}
 /*                            main                           */
+
 @media (max-width: 1199px) {
   .table-groub table {
     width: 1115px;
@@ -2462,6 +2590,13 @@ a.item-status:hover {
   }
   .order-btn-cont {
     align-items: center;
+  }
+  .credit-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .credit-box {
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 991px) {
@@ -2628,6 +2763,9 @@ a.item-status:hover {
   .table-groub table {
     width: 890px;
   }
+  .notification-body {
+    padding: 0 0 40px;
+  }
 }
 @media (max-width: 660px) {
   .book-container {
@@ -2641,6 +2779,12 @@ a.item-status:hover {
   .order-item {
     width: auto;
     margin-bottom: 6px;
+  }
+  .credit-anchor {
+    font-size: 16px;
+  }
+  .credit-anchor i {
+    font-size: 24px;
   }
 }
 .overlay-box {
@@ -2656,23 +2800,25 @@ a.item-status:hover {
   display: none;
 }
 /***************************pop-up*************************/
-
+.wothdraw-modal .modal-dialog,
 .Report-modal .modal-dialog {
   margin: 10% auto 0;
 }
 
 @media (max-width: 480px) {
+  .wothdraw-modal .modal-dialog,
   .Report-modal .modal-dialog {
     margin-top: 60px;
     width: calc(100vw - 40px);
   }
 }
-
+.wothdraw-modal .modal-content,
 .Report-modal .modal-content {
   padding: 60px 45px 45px;
 }
 
 @media (max-width: 480px) {
+  .wothdraw-modal .modal-content,
   .Report-modal .modal-content {
     padding: 40px 25px;
   }
@@ -2756,6 +2902,17 @@ a.item-status:hover {
   padding: 15px 20px;
   height: 100px;
   resize: none;
+}
+.wothdraw-pargh {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--black-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+.wothdraw-pargh span {
+  font-weight: 500;
+  color: var(--main-hover);
 }
 .modal-body {
   padding: 0;
