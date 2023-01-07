@@ -259,11 +259,6 @@ if (dateExists) {
   });
 }
 
-// var months = ["يناير", "فبراير", "مارس", "إبريل", "مايو", "يونيو",
-//               "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
-
-// var days =["اﻷحد","اﻷثنين","الثلاثاء","اﻷربعاء","الخميس","الجمعة","السبت"];
-
 //calender
 const calenderExists = document.getElementsByClassName("calendar").length > 0;
 if (calenderExists) {
@@ -428,3 +423,22 @@ if (calenderExists) {
   const cal = new Calendar();
   cal.init();
 }
+
+//file input
+$(document).ready(function () {
+  $(".upload-change").change(function () {
+    var preview = $(this).parents(".custom-file-upload").siblings(".preview");
+    var files = this.files;
+    preview.html("");
+    for (let i = 0; i < files.length; i++) {
+      var val = this.files[i];
+      var img = (window.URL ? URL : webkitURL).createObjectURL(val);
+      console.log(window);
+      preview.append(
+        "<div class='file-pre'><img src='" +
+          img +
+          "'><button><i class='las la-trash-alt'></i></button></div>"
+      );
+    }
+  });
+});
