@@ -2066,6 +2066,7 @@ html[dir="ltr"] .custom-pagention a i {
 }
 .calender-days {
   width: calc(100% - 180px);
+  max-width: 1200px;
 }
 .calendar__month {
   display: flex;
@@ -2829,41 +2830,42 @@ input:checked + .switch-slider:before {
   justify-content: space-between;
   padding: 10px;
 }
-.contact-form, .contact-img{
+.contact-form,
+.contact-img {
   width: 40%;
   overflow: hidden;
   max-width: 390px;
 }
-.contact-form{
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: start;
 }
-.contact-cont{
+.contact-cont {
   width: 100%;
   max-width: 100%;
 }
-.contact-head{
+.contact-head {
   font-weight: 700;
   font-size: 20px;
   color: var(--black-color);
   margin-bottom: 22px;
   text-align: start;
 }
-.contact-anchor-cont{
+.contact-anchor-cont {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
-.contact-anchor{
+.contact-anchor {
   display: inline-flex;
   align-items: center;
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 15px;
   color: var(--black-color);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .contact-anchor i {
   font-size: 24px;
@@ -2871,31 +2873,31 @@ input:checked + .switch-slider:before {
   margin-inline-end: 10px;
   color: var(--main-hover);
 }
-.contact-anchor:hover{
+.contact-anchor:hover {
   text-decoration: none;
   color: var(--main-hover);
 }
-.contact-form .form-input{
+.contact-form .form-input {
   font-size: 14px;
 }
-.contact-form textarea.form-input{
+.contact-form textarea.form-input {
   font-size: 14px;
   padding: 10px 50px;
   resize: unset;
   height: 100px;
 }
-.contact-form textarea.form-input::placeholder{
+.contact-form textarea.form-input::placeholder {
   color: var(--sec-color);
 }
-.contact-form .textarea-icon{ 
+.contact-form .textarea-icon {
   top: 13px;
   transform: none;
 }
-.contact-form .first-btn{
+.contact-form .first-btn {
   width: 100%;
   margin: 0;
 }
-.contact-img{
+.contact-img {
   margin-bottom: 0;
 }
 
@@ -3103,10 +3105,11 @@ input:checked + .switch-slider:before {
     flex-direction: column;
     align-items: center;
   }
-  .contact-form, .contact-img{
+  .contact-form,
+  .contact-img {
     width: 100%;
   }
-  .contact-form{
+  .contact-form {
     margin-bottom: 40px;
   }
 }
