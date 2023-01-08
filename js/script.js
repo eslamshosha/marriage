@@ -346,4 +346,11 @@ function activeStep(ele, stepId) {
     var activeStep = "#activeStep-" + activeHead;
     $(activeStep).addClass("active");
   }
+
+  //hide register-link
+  if(stepId > 1){
+    $(".register-link").hide();
+  }else{
+    $(".register-link").show();
+  }
 }
