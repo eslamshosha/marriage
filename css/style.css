@@ -729,8 +729,11 @@ html[dir="ltr"] .terms-box-dir {
   text-transform: capitalize;
   margin-bottom: 18px;
 }
-.check-label {
+.check-width{
   min-width: 25%;
+}
+.check-label {
+  /* min-width: 25%; */
   text-align: start;
   position: relative;
   font-weight: 400;
@@ -1247,8 +1250,10 @@ second, second and am/pm */
   .full-grid {
     grid-column: 1 / span 1;
   }
-  .check-label {
+  .check-width{
     min-width: 50%;
+  }
+  .check-label{
     margin-bottom: 15px;
   }
   .work-times {
