@@ -78,12 +78,12 @@
                       <label class="main-check-label">نوع الحساب</label>
                       <div class="check-group">
                         <label class="check-label">
-                          <input type="checkbox" checked="checked" />
+                          <input type="radio" checked="checked" name="kind" />
                           <span class="check-text">صالون</span>
                           <span class="checkmark"></span>
                         </label>
                         <label class="check-label">
-                          <input type="checkbox" />
+                          <input type="radio" name="kind" />
                           <span class="check-text">قاعة</span>
                           <span class="checkmark"></span>
                         </label>
@@ -214,7 +214,11 @@
                       <div class="form-group">
                         <label class="form-label"> شعار القاعة</label>
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -228,7 +232,11 @@
                           الصورة الرئيسية للقاعة</label
                         >
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -240,7 +248,12 @@
                       <div class="form-group">
                         <label class="form-label"> الصور الفرعية للقاعة</label>
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" multiple />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            multiple
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -284,17 +297,21 @@
                         <label class="main-check-label">نوع القاعة</label>
                         <div class="check-group">
                           <label class="check-label">
-                            <input type="checkbox" checked="checked" />
+                            <input
+                              type="radio"
+                              checked="checked"
+                              name="gender"
+                            />
                             <span class="check-text">رجال</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="gender" />
                             <span class="check-text">نساء</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="gender" />
                             <span class="check-text">رجال/ نساء</span>
                             <span class="checkmark"></span>
                           </label>
@@ -313,12 +330,12 @@
                         >
                         <div class="check-group">
                           <label class="check-label">
-                            <input type="checkbox" checked="checked" />
+                            <input type="radio" checked="checked" name="foodCheck"/>
                             <span class="check-text">نعم</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="foodCheck"/>
                             <span class="check-text">لا</span>
                             <span class="checkmark"></span>
                           </label>
@@ -385,7 +402,11 @@
                       <div class="form-group">
                         <label class="form-label"> شعار الصالون</label>
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -399,7 +420,11 @@
                           الصورة الرئيسية للصالون</label
                         >
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -411,7 +436,12 @@
                       <div class="form-group">
                         <label class="form-label"> الصور الفرعية للصالون</label>
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" multiple />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            multiple
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -449,17 +479,17 @@
                         >
                         <div class="check-group">
                           <label class="check-label">
-                            <input type="checkbox" checked="checked" />
+                            <input type="radio" name="place" checked="checked" />
                             <span class="check-text">المركز</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="place" />
                             <span class="check-text">المنزل</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="place" />
                             <span class="check-text">المركز/ المنزل</span>
                             <span class="checkmark"></span>
                           </label>
@@ -469,12 +499,12 @@
                         <label class="main-check-label">نوع الصالون</label>
                         <div class="check-group">
                           <label class="check-label">
-                            <input type="checkbox" checked="checked" />
+                            <input type="radio" name="gendersalon" checked="checked" />
                             <span class="check-text">رجالي</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="gendersalon" />
                             <span class="check-text">نسائي</span>
                             <span class="checkmark"></span>
                           </label>
@@ -604,12 +634,12 @@
                         >
                         <div class="check-group">
                           <label class="check-label">
-                            <input type="checkbox" checked="checked" />
+                            <input type="radio" name="book" checked="checked" />
                             <span class="check-text">نعم</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="book" />
                             <span class="check-text">لا</span>
                             <span class="checkmark"></span>
                           </label>
@@ -621,12 +651,12 @@
                         >
                         <div class="check-group">
                           <label class="check-label">
-                            <input type="checkbox" checked="checked" />
+                            <input type="radio" name="bookservices" checked="checked" />
                             <span class="check-text">نعم</span>
                             <span class="checkmark"></span>
                           </label>
                           <label class="check-label">
-                            <input type="checkbox" />
+                            <input type="radio" name="bookservices" />
                             <span class="check-text">لا</span>
                             <span class="checkmark"></span>
                           </label>
@@ -661,7 +691,11 @@
                           صورة شهادة السجل التجاري</label
                         >
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -705,7 +739,11 @@
                           صورة شهادة التسجيل التضريبي</label
                         >
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" />
+                          <input
+                            type="file"
+                            class="upload-change"
+                            accept="image/"
+                          />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"

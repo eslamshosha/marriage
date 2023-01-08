@@ -739,7 +739,8 @@ html[dir="ltr"] .terms-box-dir {
   padding-inline-start: 35px;
   transition: all 0.3s ease-in-out;
 }
-.check-group input[type="checkbox"] {
+.check-group input[type="checkbox"],
+.check-group input[type="radio"] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -759,6 +760,12 @@ html[dir="ltr"] .terms-box-dir {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.check-group .custom-checkmark {
+  border-radius: 2px;
+}
+.check-group input[type="checkbox"] ~ .checkmark {
+  border-radius: 2px;
 }
 .check-group:hover input ~ .checkmark {
   background-color: #f1f1f1;
@@ -1054,9 +1061,7 @@ html[dir="ltr"] .terms-box-dir {
 .group-input .check-group {
   margin-bottom: 5px;
 }
-.check-group .custom-checkmark {
-  border-radius: 2px;
-}
+
 .work-times {
   display: flex;
   align-items: center;
@@ -1411,6 +1416,7 @@ second, second and am/pm */
 .drop-span {
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 .drop-link i.arrow {
   content: "";
@@ -2616,12 +2622,19 @@ a.item-status:hover {
 }
 .file-pre {
   position: relative;
-}
-.preview img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 70px;
   height: 70px;
+  overflow: hidden;
   border-radius: 5px;
   margin-inline-end: 10px;
+}
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .file-pre button {
   position: absolute;

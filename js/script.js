@@ -103,7 +103,7 @@ if (selectExists) {
 //showPass
 function showPass(showPass) {
   sibling = showPass.parentElement.nextElementSibling;
-  sibling.focus();
+  // sibling.focus();
   if (showPass.checked) {
     sibling.setAttribute("type", "text");
   } else {
