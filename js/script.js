@@ -111,15 +111,15 @@ function showPass(showPass) {
   }
 }
 //file input
-$(".custom-file-upload .upload-change").change(function (e) {
-  let file_val;
-  if ($(this).val() == "") {
-    file_val = $(".file-txt").data("title");
-  } else {
-    file_val = $(this).prop("files")[0].name;
-  }
-  $(this).siblings(".file-txt").html(file_val);
-});
+// $(".custom-file-upload .upload-change").change(function (e) {
+//   let file_val;
+//   if ($(this).val() == "") {
+//     file_val = $(".file-txt").data("title");
+//   } else {
+//     file_val = $(this).prop("files")[0].name;
+//   }
+//   $(this).siblings(".file-txt").html(file_val);
+// });
 const dateExists = document.getElementsByClassName("selector").length > 0;
 if (dateExists) {
   // commonjs // flatpicker date input
@@ -132,6 +132,15 @@ if (dateExists) {
   });
 }
 
+const timeExists = document.getElementsByClassName("work-times").length > 0;
+if (timeExists) {
+  // commonjs // flatpicker date input
+  $(".work-times input").flatpickr({
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+  });
+}
 //calender
 const calenderExists = document.getElementsByClassName("calendar").length > 0;
 if (calenderExists) {
