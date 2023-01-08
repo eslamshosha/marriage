@@ -319,8 +319,8 @@ $(document).ready(function () {
 //form wizard
 function activeStep(ele, stepId) {
   var nextStep = "#step_" + stepId;
-  $(".step").not(nextStep).fadeOut();
-  $(nextStep).fadeIn();
+  $(".step").not(nextStep).hide();
+  $(nextStep).show();
   if ($(ele).hasClass("btn-irv-default")) {
     var activeHead = stepId;
     var activeStep = "#activeStep-" + activeHead;
