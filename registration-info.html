@@ -50,22 +50,22 @@
                   <div class="steps">
                     <div class="steps-progress">
                       <ul class="progressbar list-unstyled wizard-step">
-                        <li class="">
+                        <li class="" id="activeStep-1">
                           <i class="las la-user"></i>
                         </li>
-                        <li>
+                        <li id="activeStep-2">
                           <i class="las la-mobile"></i>
                         </li>
-                        <li class="d-none">
+                        <li class="d-none" id="activeStep-3">
                           <i class="las la-city"></i>
                         </li>
-                        <li>
+                        <li id="activeStep-4">
                           <i class="las la-city"></i>
                         </li>
-                        <li>
+                        <li id="activeStep-5">
                           <i class="las la-credit-card"></i>
                         </li>
-                        <li>
+                        <li id="activeStep-6">
                           <i class="las la-check"></i>
                         </li>
                       </ul>
@@ -73,7 +73,7 @@
                   </div>
                 </div>
                 <div class="wizard-body">
-                  <div class="step initial active">
+                  <div class="step initial active" id="step_1">
                     <div class="form-group main-check">
                       <label class="main-check-label">نوع الحساب</label>
                       <div class="check-group">
@@ -143,8 +143,17 @@
                         </div>
                       </div>
                     </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 2)"
+                      >
+                        التالي
+                      </button>
+                    </div>
                   </div>
-                  <div class="step">
+                  <div class="step" id="step_2">
                     <div class="verfiy-cont">
                       <p class="form-text">اضف رمز التحقق المرسل على جوالك</p>
                       <div class="form-group digit-group otp-form">
@@ -179,8 +188,24 @@
                         <a href="#">إعادة الإرسال</a></span
                       >
                     </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 1)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 3)"
+                      >
+                        التالي
+                      </button>
+                    </div>
                   </div>
-                  <div class="step">
+                  <div class="step" id="step_3">
                     <div class="group-input">
                       <div class="form-group">
                         <label class="form-label"> اسم القاعة</label>
@@ -215,7 +240,7 @@
                       <div class="form-group">
                         <label class="form-label"> الصور الفرعية للقاعة</label>
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" multiple/>
+                          <input type="file" class="upload-change" multiple />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -334,8 +359,24 @@
                         </div>
                       </div>
                     </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 2)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 4)"
+                      >
+                        التالي
+                      </button>
+                    </div>
                   </div>
-                  <div class="step">
+                  <div class="step" id="step_4">
                     <div class="group-input">
                       <div class="form-group">
                         <label class="form-label"> اسم الصالون</label>
@@ -370,7 +411,7 @@
                       <div class="form-group">
                         <label class="form-label"> الصور الفرعية للصالون</label>
                         <label class="custom-file-upload form-input">
-                          <input type="file" class="upload-change" multiple/>
+                          <input type="file" class="upload-change" multiple />
                           <span
                             class="upload-btn file-txt"
                             data-title="Upload CV"
@@ -592,8 +633,24 @@
                         </div>
                       </div>
                     </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 3)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 5)"
+                      >
+                        التالي
+                      </button>
+                    </div>
                   </div>
-                  <div class="step">
+                  <div class="step" id="step_5">
                     <div class="group-input">
                       <div class="form-group">
                         <label class="form-label"> رقم السجل التجاري</label>
@@ -674,8 +731,24 @@
                         <input type="number" class="form-input" />
                       </div>
                     </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 4)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 6)"
+                      >
+                        تسجيل
+                      </button>
+                    </div>
                   </div>
-                  <div class="step">
+                  <div class="step" id="step_6">
                     <div class="success-cont">
                       <h1 class="success-icon">
                         <i class="las la-check-circle"></i>
@@ -692,7 +765,7 @@
                   </div>
                 </div>
                 <div class="wizard-footer">
-                  <div class="wizard-btn-cont">
+                  <!-- <div class="wizard-btn-cont">
                     <button
                       id="wizard-prev"
                       style="display: none"
@@ -716,7 +789,7 @@
                     >
                       تسجيل
                     </button>
-                  </div>
+                  </div> -->
                 </div>
               </form>
             </div>

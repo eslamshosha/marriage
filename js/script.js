@@ -94,134 +94,7 @@ $(document).ready(function () {
     e.preventDefault();
   });
 });
-//wizard form
-const checkButtons = (activeStep, stepsCount) => {
-  const prevBtn = $("#wizard-prev");
-  const nextBtn = $("#wizard-next");
-  const submBtn = $("#wizard-subm");
 
-  switch (activeStep / stepsCount) {
-    case 0: // First Step
-      prevBtn.hide();
-      submBtn.hide();
-      nextBtn.show();
-      break;
-    case 1: // Last Step
-      nextBtn.hide();
-      prevBtn.show();
-      submBtn.show();
-      break;
-    case 4: // Last Step
-      nextBtn.hide();
-      prevBtn.hide();
-      submBtn.hide();
-      break;
-    default:
-      submBtn.hide();
-      prevBtn.show();
-      nextBtn.show();
-  }
-};
-
-// Scrolling the form to the middle of the screen if the form
-// is taller than the viewHeight
-const scrollWindow = (activeStepHeight, viewHeight) => {
-  if (viewHeight < activeStepHeight) {
-    $(window).scrollTop($(steps[activeStep]).offset().top - viewHeight / 2);
-  }
-};
-
-// Setting the wizard body height, this is needed because
-// the steps inside of the body have position: absolute
-const setWizardHeight = (activeStepHeight) => {
-  $(".wizard-body").height(activeStepHeight);
-};
-
-$(function () {
-  // Form step counter (little cirecles at the top of the form)
-  const wizardSteps = $(".wizard-header .wizard-step li");
-  // Form steps (actual steps)
-  const steps = $(".wizard-body .step");
-  // Number of steps (counting from 0)
-  const stepsCount = steps.length - 2;
-  // Screen Height
-  const viewHeight = $(window).height();
-  // Current step being shown (counting from 0)
-  let activeStep = 0;
-  // Height of the current step
-  let activeStepHeight = $(steps[activeStep]).height();
-
-  checkButtons(activeStep, stepsCount);
-  setWizardHeight(activeStepHeight);
-
-  // Resizing wizard body when the viewport changes
-  $(window).resize(function () {
-    setWizardHeight($(steps[activeStep]).height());
-  });
-  const current = $(".page-container .register-link");
-  // Previous button handler
-  $("#wizard-prev").click(() => {
-    // Sliding out current step
-    $(steps[activeStep]).removeClass("active");
-    // $(wizardSteps[activeStep]).removeClass("active");
-    $(wizardSteps[activeStep]).prev("li").removeClass("active");
-    // console.log(activeStep);
-    activeStep == 1 ? current.show() : false;
-    activeStep--;
-
-    // Sliding in previous Step
-    $(steps[activeStep]).removeClass("off").addClass("active");
-    // $(wizardSteps[activeStep]).prev("li").removeClass("active");
-
-    activeStepHeight = $(steps[activeStep]).height();
-    setWizardHeight(activeStepHeight);
-    checkButtons(activeStep, stepsCount);
-  });
-
-  // Next button handler
-  $("#wizard-next").click(() => {
-    // Sliding out current step
-    $(steps[activeStep])
-      .removeClass("inital")
-      .addClass("off")
-      .removeClass("active");
-    // $(wizardSteps[activeStep]).removeClass("active");
-    current.hide();
-    // Next step
-    activeStep++;
-
-    // Sliding in next step
-    $(steps[activeStep]).addClass("active");
-    $(wizardSteps[activeStep]).prev("li").addClass("active");
-
-    activeStepHeight = $(steps[activeStep]).height();
-    setWizardHeight(activeStepHeight);
-    checkButtons(activeStep, stepsCount);
-  });
-  // button submit handler
-  $("#wizard-subm").click(() => {
-    // Sliding out current step
-    $(steps[activeStep])
-      .removeClass("inital")
-      .addClass("off")
-      .removeClass("active");
-    // $(wizardSteps[activeStep]).removeClass("active");
-    current.hide();
-    // Next step
-    activeStep++;
-
-    // Sliding in next step
-    $(steps[activeStep]).addClass("active");
-    $(wizardSteps[activeStep]).prev("li").addClass("active");
-    $(wizardSteps[activeStep]).addClass("active");
-
-    activeStepHeight = $(steps[activeStep]).height();
-    setWizardHeight(activeStepHeight);
-    checkButtons(activeStep, stepsCount);
-    $("#wizard-prev").hide();
-    $("#wizard-next").hide();
-  });
-});
 const selectExists = document.getElementsByClassName("select_input").length > 0;
 if (selectExists) {
   const $select2 = $(".select_input");
@@ -442,3 +315,26 @@ $(document).ready(function () {
     }
   });
 });
+
+//form wizard
+function activeStep(ele, stepId) {
+  var nextStep = "#step_" + stepId;
+  $(".step").not(nextStep).fadeOut();
+  $(nextStep).fadeIn();
+  if ($(ele).hasClass("btn-irv-default")) {
+    var activeHead = stepId;
+    var activeStep = "#activeStep-" + activeHead;
+    $(activeStep).removeClass("active");
+  } else if (stepId == 6) {
+    var activeHead = stepId - 1;
+    var lastHead = stepId;
+    var activeStep = "#activeStep-" + activeHead;
+    var activelast = "#activeStep-" + lastHead;
+    $(activeStep).addClass("active");
+    $(activelast).addClass("active");
+  } else {
+    var activeHead = stepId - 1;
+    var activeStep = "#activeStep-" + activeHead;
+    $(activeStep).addClass("active");
+  }
+}
