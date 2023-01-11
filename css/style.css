@@ -3011,16 +3011,17 @@ input:checked + .switch-slider:before {
   }
   .top-header {
     flex-direction: column;
-    padding: 10px 20px 20px;
+    padding: 10px 20px;
   }
   .nav-left {
     width: 100%;
     justify-content: space-between;
   }
   .date-head {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 8px; */
+    display: none;
   }
   .date-head .date-title {
     margin-bottom: 0;
@@ -3031,6 +3032,8 @@ input:checked + .switch-slider:before {
   }
   .user-profile .profile-img {
     margin: 0;
+    width: 50px;
+    height: 50px;
   }
   .profile-menu::before {
     inset-inline-start: 171px;
